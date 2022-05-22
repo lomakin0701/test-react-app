@@ -1,13 +1,16 @@
 import React, {useEffect} from "react";
-import {useTypedSelector} from "../hooks/useTypedSelector";
-import {useActions} from "../hooks/useActions";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
+import {useActions} from "../../hooks/useActions";
+
+import { Table } from 'antd';
+
 
 const UserList: React.FC = () => {
     const {users, loading, error} = useTypedSelector(state => state.user)
     const {fetchUsers} = useActions();
 
     useEffect(()=> {
-        fetchUsers()
+        fetchUsers();
     },[])
 
     if(loading){
@@ -21,8 +24,8 @@ const UserList: React.FC = () => {
     return (
         <div>
             {users.map(item => (
-                <div key={item.id}>
-                    Юзвверь: {item.name}
+                <div key={item.user_id}>
+                    Юзвверь: {item.user_login}
                 </div>
             ))}
         </div>

@@ -1,7 +1,7 @@
+import * as AuthActionCreators from './auth'
 import * as UserActionCreators from './user'
-import * as TodoActionCreators from './todo'
 
 export default {
+    ...AuthActionCreators,
     ...UserActionCreators,
-    ...TodoActionCreators
 }

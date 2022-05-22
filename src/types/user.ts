@@ -25,6 +25,9 @@ interface FetchUserErrorAction {
 export type UserAction = FetchUserAction | FetchUserSuccessAction | FetchUserErrorAction
 
 export interface IUser {
-    id: number,
-    name: string
+    user_id: string;
+    user_fio: string;
+    user_login: string;
+    role: string;
+    count: number;
 }
