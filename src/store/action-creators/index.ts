@@ -1,7 +1,11 @@
 import * as AuthActionCreators from './auth'
 import * as UserActionCreators from './user'
+import * as DeviceActionCreators from './devices'
 
-export default {
-    ...AuthActionCreators,
-    ...UserActionCreators,
-}
+const exportedObject = {
+        ...AuthActionCreators,
+        ...UserActionCreators,
+        ...DeviceActionCreators,
+};
+
+export default exportedObject;

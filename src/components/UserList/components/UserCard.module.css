@@ -1,0 +1,8 @@
+.card {
+    padding-left: 10px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
