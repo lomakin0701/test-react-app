@@ -26,33 +26,15 @@ const Devices: React.FC = () => {
             key: 'device_name',
         },
         {
+            title: 'Вышестоящее устройство',
+            dataIndex: 'parent_name',
+            key: 'parent_name',
+        },
+        {
             title: 'IP',
             dataIndex: 'device_ip',
             key: 'device_ip',
-        },
-        {
-            title: 'ID',
-            dataIndex: 'device_id',
-            key: 'device_id',
-        },
-
-        {
-            title: 'Кол-во',
-            dataIndex: 'count',
-            key: 'count',
-        },
-        {
-            title: 'Действия',
-            key: 'action',
-            render: (_, record) => {
-                return (
-                    <Space size="middle">
-                        <Button onClick={showDrawer}>Удалить</Button>
-                        <Button>Редактировать</Button>
-                    </Space>
-                )
-            },
-        },
+        }
     ];
     useEffect(()=> {
         fetchDevices();
