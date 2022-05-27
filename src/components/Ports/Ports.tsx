@@ -112,7 +112,8 @@ const Ports: React.FC = () => {
                     layout="inline"
                 >
                     <Form.Item label="Устройство" name="device_id" >
-                        <Select style={{width: 200}}  placeholder="Не выбрано">
+                        <Select style={{width: 200}}>
+                            <Select.Option key="" value="">Не выбрано</Select.Option>
                             {devices && devices.map(item => (
                                 <Select.Option key={item.device_id} value={item.device_id}>{item.device_name}</Select.Option>
                             ))}

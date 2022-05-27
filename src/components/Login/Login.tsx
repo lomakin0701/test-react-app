@@ -5,8 +5,8 @@ import styles from './Login.module.css'
 import {useActions} from "../../hooks/useActions";
 
 const Login: React.FC = () => {
-    const [login, setLogin] = useState('superadmin');
-    const [password, setPassword] = useState('admin');
+    const [login, setLogin] = useState('');
+    const [password, setPassword] = useState('');
 
     const {fetchLogin} = useActions();
 
