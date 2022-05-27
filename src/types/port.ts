@@ -57,5 +57,17 @@ export type PortAction = FetchPortsAction | FetchPortsSuccessAction | FetchPorts
 
 
 export interface IPort {
-
+    device_ip: string,
+    device_name: string,
+    error: number,
+    length: string,
+    name: string,
+    pon_mac: string,
+    port: number,
+    signal: string,
+    status: string,
+    tree: number,
+    create_dt: string,
+    update_dt: string,
+    usr_mac: string[]
 }

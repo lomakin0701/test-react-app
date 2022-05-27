@@ -10,39 +10,70 @@ import style from './Ports.module.css';
 
 const columns: ColumnsType<IPort> = [
     {
-        title: 'Пользователь',
-        dataIndex: 'user',
-        key: 'user',
+        title: 'IP устройства',
+        dataIndex: 'device_ip',
+        key: 'device_ip',
     },
     {
-        title: 'Сервис',
-        dataIndex: 'service',
-        key: 'service',
+        title: 'Название устройства',
+        dataIndex: 'device_name',
+        key: 'device_name',
     },
     {
-        title: 'MAC адрес',
-        dataIndex: 'mac',
-        key: 'mac',
+        title: 'Название',
+        dataIndex: 'name',
+        key: 'name',
     },
     {
-        title: 'Удаленный IP',
-        dataIndex: 'remote_ip',
-        key: 'remote_ip',
+        title: 'Ошибки',
+        dataIndex: 'error',
+        key: 'error',
     },
     {
-        title: 'Локальный IP',
-        dataIndex: 'local_ip',
-        key: 'local_ip',
+        title: 'Длина',
+        dataIndex: 'length',
+        key: 'length',
     },
     {
-        title: 'Дата начала',
-        dataIndex: 'date_up',
-        key: 'date_up',
+        title: 'Pon MAC',
+        dataIndex: 'pon_mac',
+        key: 'pon_mac',
     },
     {
-        title: 'Дата завершения',
-        dataIndex: 'date_down',
-        key: 'date_down',
+        title: 'Дерево',
+        dataIndex: 'tree',
+        key: 'tree',
+    },
+    {
+        title: 'Порт',
+        dataIndex: 'port',
+        key: 'port',
+    },
+    {
+        title: 'Сигнал',
+        dataIndex: 'signal',
+        key: 'signal',
+    },
+    {
+        title: 'Статус',
+        dataIndex: 'status',
+        key: 'status',
+    },
+    {
+        title: 'USR',
+        dataIndex: 'usr_mac',
+        key: 'usr_mac',
+    },
+
+    {
+        title: 'Дата создания',
+        dataIndex: 'create_dt',
+        key: 'create_dt',
+    },
+    {
+        title: 'Дата обновления',
+        dataIndex: 'update_dt',
+        key: 'update_dt',
     }
 ];
 
@@ -81,14 +112,14 @@ const Ports: React.FC = () => {
                     layout="inline"
                 >
                     <Form.Item label="Устройство" name="device_id" >
-                        <Select style={{width: 200}}>
+                        <Select style={{width: 200}}  placeholder="Не выбрано">
                             {devices && devices.map(item => (
                                 <Select.Option key={item.device_id} value={item.device_id}>{item.device_name}</Select.Option>
                             ))}
                         </Select>
                     </Form.Item>
                     <Form.Item name="mac_address">
-                        <Input />
+                        <Input placeholder={"Mac address"} />
                     </Form.Item>
                     <Form.Item>
                         <Button type="primary" htmlType="submit">
