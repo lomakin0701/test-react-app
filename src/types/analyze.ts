@@ -35,4 +35,5 @@ export type AnalyzeAction = FetchAnalyzesAction | FetchAnalyzesSuccessAction | F
 export interface IAnalyze {
     type: string,
     message: string,
+    count: number,
 }
