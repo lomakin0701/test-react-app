@@ -58,7 +58,7 @@ const App: React.FC = () => {
                         <Layout.Content style={{ padding: '0 50px' }}>
                             <div style={{ margin: '16px 0' }}></div>
                             <Routes>
-                                <Route path="/" element={<Home />} />
+                                {/*<Route path="/" element={<Home />} />*/}
                                 <Route path="/users" element={<UserList />} />
                                 <Route path="/devices" element={<Devices />} />
                                 <Route path="/ports" element={<Ports />} />

@@ -1,7 +1,10 @@
 import {DeviceState, DeviceAction, DeviceActionTypes} from "../../types/device";
 
 const initialState: DeviceState = {
-    devices: [],
+    devices: {
+        count: 0,
+        data: []
+    },
     device: null,
     loading: false,
     error: null

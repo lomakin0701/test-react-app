@@ -1,5 +1,5 @@
 import axios from "axios";
-import {IUser, UserAction, UserActionTypes} from "../../types/user";
+import {IUser, FetchUsersResponse, UserAction, UserActionTypes} from "../../types/user";
 import {Dispatch} from "redux";
 
 export const fetchUsers = () => {
@@ -7,7 +7,7 @@ export const fetchUsers = () => {
         const state = await getState();
         try  {
             dispatch({type: UserActionTypes.FETCH_USERS})
-            const response = await axios.get<IUser[]>('api/users', {
+            const response = await axios.get<FetchUsersResponse>('api/users', {
                 headers: {
                     'X-auth-key': state.auth.token,
                     'X-auth-login': state.auth.login,

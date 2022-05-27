@@ -1,11 +1,15 @@
-
-
 export interface UserState {
-    users?: IUser[];
+    users?: FetchUsersResponse;
     loading: boolean;
     error: null | string;
     user?: IUser | null
 }
+
+export interface FetchUsersResponse {
+    count: number,
+    data: IUser[],
+}
+
 
 export enum UserActionTypes {
     FETCH_USERS = 'FETCH_USERS',
@@ -31,7 +35,7 @@ interface FetchUsersAction {
 
 interface FetchUsersSuccessAction {
     type: UserActionTypes.FETCH_USERS_SUCCESS
-    payload: IUser []
+    payload: FetchUsersResponse
 }
 
 interface FetchUsersErrorAction {

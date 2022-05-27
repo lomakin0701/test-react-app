@@ -1,0 +1,13 @@
+.root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding-bottom: 40px;
+}
+
+.root > a {
+    padding: 20px;
+    color: var(--ant-primary-color);
+    background: #fff;
+    border-color: var(--ant-primary-color);
+}

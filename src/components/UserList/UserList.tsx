@@ -57,7 +57,7 @@ const UserList: React.FC = () => {
                 <Col span={16}>
                     <Table
                         columns={columns}
-                        dataSource={users}
+                        dataSource={users?.data}
                         onRow={(record, rowIndex) => {
                             return {
                                 onClick: event => {onSelect(record)}, // click row

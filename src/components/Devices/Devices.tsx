@@ -57,7 +57,7 @@ const Devices: React.FC = () => {
             />
             <Row>
                 <Col span={16}>
-                    <Table columns={columns} dataSource={devices} />
+                    <Table columns={columns} dataSource={devices.data} />
                 </Col>
                 <Col span={8}>
                     <DeviceCard />

@@ -1,8 +1,15 @@
+import {IUser} from "./user";
+
 export interface DeviceState {
-    devices: IDevice[];
+    devices: FetchDevicesResponse;
     device?: IDevice | null;
     loading: boolean;
     error: null | string;
+}
+
+export interface FetchDevicesResponse {
+    count: number,
+    data: IDevice[],
 }
 
 export enum DeviceActionTypes {
@@ -29,7 +36,7 @@ interface FetchDevicesAction {
 
 interface FetchDevicesSuccessAction {
     type: DeviceActionTypes.FETCH_DEVICES_SUCCESS
-    payload: IDevice []
+    payload: FetchDevicesResponse
 }
 
 interface FetchDevicesErrorAction {

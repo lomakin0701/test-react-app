@@ -1,13 +1,13 @@
 import axios from "axios";
 import {Dispatch} from "redux";
-import {IDevice, DeviceAction, DeviceActionTypes} from "../../types/device";
+import {IDevice,FetchDevicesResponse,  DeviceAction, DeviceActionTypes} from "../../types/device";
 
 export const fetchDevices = (page = 1, limit =  10) => {
     return async (dispatch: Dispatch<DeviceAction>, getState: () => any) => {
         const state = await getState();
         try  {
             dispatch({type: DeviceActionTypes.FETCH_DEVICES})
-            const response = await axios.get<IDevice[]>('api/devices', {
+            const response = await axios.get<FetchDevicesResponse>('api/devices', {
                 headers: {
                     'X-auth-key': state.auth.token,
                     'X-auth-login': state.auth.login,
