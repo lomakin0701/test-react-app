@@ -63,6 +63,7 @@ const columns: ColumnsType<IPort> = [
         title: 'USR',
         dataIndex: 'usr_mac',
         key: 'usr_mac',
+        render: (_, {usr_mac})=> usr_mac.map(item => <p>{item}</p>)
     },
 
     {
