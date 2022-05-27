@@ -3,6 +3,7 @@ import * as UserActionCreators from './user'
 import * as DeviceActionCreators from './devices'
 import * as SessionActionCreators from './session'
 import * as PortActionCreators from './port'
+import * as AnalyzeActionCreators from './analyze'
 
 const exportedObject = {
         ...AuthActionCreators,
@@ -10,6 +11,7 @@ const exportedObject = {
         ...DeviceActionCreators,
         ...SessionActionCreators,
         ...PortActionCreators,
+        ...AnalyzeActionCreators,
 };
 
 export default exportedObject;

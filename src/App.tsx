@@ -10,6 +10,7 @@ import UserList from "./components/UserList/UserList";
 import Devices from "./components/Devices/Devices";
 import Sessions from "./components/Sessions/Sessions";
 import Ports from "./components/Ports/Ports";
+import Analyze from "./components/Analyze/Аnalyze";
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -35,6 +36,7 @@ const items: MenuItem[] = [
     getItem('Устройства', '/devices', <Link to={'/devices'}/>),
     getItem('Статистика сессий', '/sessions', <Link to={'/sessions'}/>),
     getItem('Статистика портов', '/ports', <Link to={'/ports'}/>),
+    getItem('Список возможных проблем', '/analyzes', <Link to={'/analyzes'}/>),
 ];
 
 const App: React.FC = () => {
@@ -63,7 +65,7 @@ const App: React.FC = () => {
                                 <Route path="/devices" element={<Devices />} />
                                 <Route path="/ports" element={<Ports />} />
                                 <Route path="/sessions" element={<Sessions />} />
-
+                                <Route path="/analyzes" element={<Analyze />} />
                             </Routes>
                         </Layout.Content>
                     </Layout>
