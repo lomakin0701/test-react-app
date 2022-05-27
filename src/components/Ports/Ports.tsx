@@ -94,10 +94,6 @@ const Ports: React.FC = () => {
     },[])
 
 
-    if (error){
-        return <div>{error}</div>
-    }
-
     return (
         <div>
             <PageHeader
